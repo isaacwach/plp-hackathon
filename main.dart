@@ -1,3 +1,6 @@
+// IMPORTATIONS
+import 'dart:io';
+
 // PROGRAM 1
 
 void main() {
@@ -20,7 +23,7 @@ void opetations() {
 
   //Perform addition operation
   double sum = sum_of_numbers(number1, number2);
-  print(sum);
+  print("Sum: $sum");
 
   //Perform modulus operation
   double remainder = remainder_of_numbes(number1, number2);
@@ -35,4 +38,28 @@ double sum_of_numbers(double number1, double number2) {
 // Function to get the remainder
 double remainder_of_numbes(double number1, double number2) {
   return number1 % number2;
+}
+
+
+// PROGRAM 3
+
+void marks() {
+  // Collect user input for marks
+  print("Enter the marks:");
+  int marks = int.parse(stdin.readLineSync()!);
+
+  // Determine the grade based on marks
+  String grade;
+  if (marks > 85) {
+    grade = "Excellent";
+  } else if (marks >= 75 && marks <= 85) {
+    grade = "Very Good";
+  } else if (marks >= 65 && marks < 75) {
+    grade = "Good";
+  } else {
+    grade = "Average";
+  }
+
+  // Print the grade
+  print("Grade: $grade");
 }
